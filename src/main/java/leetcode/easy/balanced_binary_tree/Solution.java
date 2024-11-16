@@ -3,9 +3,10 @@ package leetcode.easy.balanced_binary_tree;
 import utils.data_structures.TreeNode;
 
 public class Solution {
-    int d = 0;
+    int d;
 
     public boolean isBalanced(TreeNode root) {
+        d = 0;
         depthOfTree(root);
         if (d > 1) {
             return false;
