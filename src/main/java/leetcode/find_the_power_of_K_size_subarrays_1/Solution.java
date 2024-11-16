@@ -9,20 +9,28 @@ public class Solution {
 
         int[] result = new int[nums.length - k + 1];
 
-        for (int i = 0; i < nums.length; i++) {
-            int max = -1;
-            for (int j = i; j < i+k-1; j++) {
-                if (nums[j+1] - nums[j] != 1) {
-                    max = -1;
-                    break;
-                }
-                max = nums[j+1];
+        int cnt = 1;
+        int startIdx = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (i < nums.length - k + 1) {
+                result[i] = -1;
             }
 
-            result[i] = max;
-            
-            if (i == nums.length - k) {
-                break;
+            if (nums[i] + 1 == nums[i + 1]) {
+                cnt += 1;
+            } else {
+                if (cnt != 1) {
+                    startIdx += cnt;
+                } else {
+                    startIdx += 1;
+                }
+                cnt = 1;
+            }
+
+            if (cnt == k) {
+                cnt -= 1;
+                result[startIdx] = nums[i + 1];
+                startIdx += 1;
             }
         }
 

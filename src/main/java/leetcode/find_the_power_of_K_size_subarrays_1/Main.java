@@ -11,7 +11,7 @@ public class Main {
         OutputUtils.printArray(solution.resultsArray(new int[]{1, 2, 3, 4, 3, 2, 5}, 3));
         OutputUtils.printArray(solution.resultsArray(new int[]{2,2,2,2,2}, 4));
         OutputUtils.printArray(solution.resultsArray(new int[]{3,2,3,2,3,2}, 2));
-
+        OutputUtils.printArray(solution.resultsArray(new int[]{3,1,2,1,4,4,88,89,90,4}, 3));
         OutputUtils.closePrintWriter();
     }
 }
