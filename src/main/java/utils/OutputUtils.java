@@ -8,10 +8,11 @@ public class OutputUtils {
 
     private OutputUtils() {}
 
-    public static void initPrintWriter() {
+    public static PrintWriter initPrintWriter() {
         if (pw == null) {
             pw = new PrintWriter(System.out);
         }
+        return pw;
     }
 
     public static void printArray(byte[] array) {
