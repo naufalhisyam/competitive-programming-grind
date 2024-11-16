@@ -3,6 +3,8 @@ package leetcode.find_the_power_of_K_size_subarrays_1;
 import utils.OutputUtils;
 
 public class Main {
+    // Find the Power of K-Size Sub arrays I
+    // https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/
 
     public static void main(String[] args) {
         Solution solution = new Solution();
